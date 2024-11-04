@@ -35,4 +35,4 @@ insert into sym_trigger_router
 values('user_trigger','target-2-source', 100, current_timestamp, current_timestamp);
 
 insert into sym_table_reload_request (target_node_id, source_node_id, trigger_id, router_id, create_time, last_update_time)
-values ('symmetricsdsTest-target', 'symmetricsdsTest-source', 'user_trigger', 'source-2-target', current_timestamp, current_timestamp);
+values ('001', '000', 'ALL', 'ALL', current_timestamp, current_timestamp);
