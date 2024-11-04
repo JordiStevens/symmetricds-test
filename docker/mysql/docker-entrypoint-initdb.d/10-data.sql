@@ -7,7 +7,7 @@ CREATE TABLE eq_users
     lastname VARCHAR(255)
 );
 
-INSERT INTO eq_users
+INSERT INTO eq_users (id, login, email, firstname, lastname)
 VALUES
     (1, 'admin', 'admin@test.com', 'ad', 'min'),
     (2, 'respo1', 'respo1@test.com', 'res', 'po1'),
