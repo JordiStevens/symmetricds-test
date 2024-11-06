@@ -30,12 +30,8 @@ insert into sym_trigger_router
 (trigger_id,router_id,initial_load_order,last_update_time,create_time)
 values('user_trigger','source-2-target', 100, current_timestamp, current_timestamp);
 
-insert into sym_trigger_router
-(trigger_id,router_id,initial_load_order,last_update_time,create_time)
-values('user_trigger','target-2-source', 100, current_timestamp, current_timestamp);
-
-insert into sym_table_reload_request (target_node_id, source_node_id, trigger_id, router_id, create_time, last_update_time)
-values ('001', '000', 'ALL', 'ALL', current_timestamp, current_timestamp);
+-- insert into sym_table_reload_request (target_node_id, source_node_id, trigger_id, router_id, create_time, last_update_time)
+-- values ('001', '000', 'ALL', 'ALL', current_timestamp, current_timestamp);
 
 insert into sym_transform_table (
     transform_id, source_node_group_id, target_node_group_id, transform_point, source_table_name,

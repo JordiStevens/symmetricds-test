@@ -1,12 +1,3 @@
-CREATE TABLE eq_users
-(
-    id INTEGER PRIMARY KEY,
-    login VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    firstname VARCHAR(255),
-    lastname VARCHAR(255)
-);
-
 INSERT INTO eq_users (id, login, email, firstname, lastname)
 VALUES
     (1, 'admin', 'admin@test.com', 'ad', 'min'),
