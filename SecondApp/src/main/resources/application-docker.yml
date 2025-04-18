@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: portal
+  datasource:
+    url: jdbc:postgresql://postgres-second-db/SECOND_DATABASE
+  jpa:
+    hibernate:
+      ddl-auto: none
+

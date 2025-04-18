@@ -1,0 +1,84 @@
+name: symmetricds-test
+
+services:
+  postgres-main-database:
+    image: postgres:latest
+    hostname: postgres-main-db
+    container_name: postgres-main-db
+    environment:
+      - POSTGRES_USER=TestUser
+      - POSTGRES_PASSWORD=TestPassword
+      - POSTGRES_DB=MAIN_DATABASE
+    ports:
+      - "5433:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "TestUser" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  postgres-second-database:
+    image: postgres:latest
+    hostname: postgres-second-db
+    container_name: postgres-second-db
+    environment:
+      - POSTGRES_USER=TestUser
+      - POSTGRES_PASSWORD=TestPassword
+      - POSTGRES_DB=SECOND_DATABASE
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "TestUser" ]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  main-app:
+    hostname: main-app
+    container_name: main-app
+    build:
+      context: ./MainApp
+      dockerfile: ./Dockerfile
+    depends_on:
+      postgres-main-database:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+
+  second-app:
+    hostname: second-app
+    container_name: second-app
+    build:
+      context: ./SecondApp
+      dockerfile: ./Dockerfile
+    depends_on:
+      postgres-second-database:
+        condition: service_healthy
+    ports:
+      - "8081:8081"
+
+  symmetricds:
+    hostname: symmetricds
+    container_name: symmetricds
+    build:
+      context: ./SymmetricDS
+      dockerfile: ./Dockerfile
+    environment:
+      MAIN_DB_USER: TestUser
+      MAIN_DB_PASSWORD: TestPassword
+      MAIN_DB_NAME: MAIN_DATABASE
+      MAIN_DB_HOSTNAME: postgres-main-db
+      SECOND_DB_USER: TestUser
+      SECOND_DB_PASSWORD: TestPassword
+      SECOND_DB_NAME: SECOND_DATABASE
+      SECOND_DB_HOSTNAME: postgres-second-db
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      postgres-main-database:
+        condition: service_healthy
+      postgres-second-database:
+        condition: service_healthy
+    ports:
+      - "31425:31415"
+      - "31427:31417"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/docker/mysql/docker-entrypoint-initdb.d/4-insert-data.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/docker/postgres/docker-entrypoint-initdb.d/10-data.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/docker/symmetricds/sync-rules/one-way-sync-transform-table.sql" dialect="MySQL" />
-    <file url="file://$PROJECT_DIR$/docker/symmetricds/sync-rules/two-way-sync-one-table.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/MainApp/src/main/resources/data.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/SymmetricDS/sync-rules.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries-2.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/queries-3.sql" dialect="PostgreSQL" />
   </component>
 </project>

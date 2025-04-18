@@ -1,0 +1,25 @@
+# general
+spring:
+  application:
+    name: SecondApp
+  datasource:
+    url: jdbc:postgresql://localhost:5434/SECOND_DATABASE
+    username: TestUser
+    driver-class-name: org.postgresql.Driver
+    password: TestPassword
+  jpa:
+    hibernate:
+#      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+  liquibase:
+
+
+logging:
+  level:
+    org.hibernate: error
+    org.springframework.cache: error
+    org.springframework.security.saml2: DEBUG
+    liquibase: info
+    liquibase.sql: info

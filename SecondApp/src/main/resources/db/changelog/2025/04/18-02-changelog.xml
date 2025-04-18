@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.29.xsd"
+        objectQuotingStrategy="QUOTE_ONLY_RESERVED_WORDS">
+    <changeSet id="add-data2-column" author="Jordi">
+        <addColumn tableName="test_table">
+            <column name="data2" type="INT"/>
+        </addColumn>
+    </changeSet>
+    <changeSet id="reload-table-data" author="Jordi">
+        <preConditions onFail="MARK_RAN" onError="MARK_RAN">
+            <tableExists tableName="sym_table_reload_request"/>
+        </preConditions>
+        <sql>
+            insert into sym_table_reload_request
+            (target_node_id, source_node_id, trigger_id, router_id, delete_first, create_time, last_update_time)
+            values ('001','000','trigger-test-table',
+                    'source-2-target', 0,current_timestamp, current_timestamp);
+        </sql>
+    </changeSet>
+</databaseChangeLog>

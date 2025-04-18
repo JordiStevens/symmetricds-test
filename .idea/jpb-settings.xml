@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpaLiquibaseChangesConfig">
+    <exclude-change idName="sym_fk_ftr_2_rtr" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_gpltlnk_2_gplt" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_ident_2_node" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_lnk_2_grp_src" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_lnk_2_grp_tgt" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_rt_2_grp_lnk" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_sec_2_node" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_tr_2_rtr" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_tr_2_trg" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_trg_2_chnl" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_trg_2_rld_chnl" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_trgplt_2_gplt" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_tt_2_grp_lnk" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_channel" tagName="dropTable" />
+    <exclude-change idName="sym_conflict" tagName="dropTable" />
+    <exclude-change idName="sym_context" tagName="dropTable" />
+    <exclude-change idName="sym_data" tagName="dropTable" />
+    <exclude-change idName="sym_data_event" tagName="dropTable" />
+    <exclude-change idName="sym_data_gap" tagName="dropTable" />
+    <exclude-change idName="sym_extension" tagName="dropTable" />
+    <exclude-change idName="sym_extract_request" tagName="dropTable" />
+    <exclude-change idName="sym_file_incoming" tagName="dropTable" />
+    <exclude-change idName="sym_file_snapshot" tagName="dropTable" />
+    <exclude-change idName="sym_file_trigger" tagName="dropTable" />
+    <exclude-change idName="sym_file_trigger_router" tagName="dropTable" />
+    <exclude-change idName="sym_grouplet" tagName="dropTable" />
+    <exclude-change idName="sym_grouplet_link" tagName="dropTable" />
+    <exclude-change idName="sym_incoming_batch" tagName="dropTable" />
+    <exclude-change idName="sym_incoming_error" tagName="dropTable" />
+    <exclude-change idName="sym_job" tagName="dropTable" />
+    <exclude-change idName="sym_load_filter" tagName="dropTable" />
+    <exclude-change idName="sym_lock" tagName="dropTable" />
+    <exclude-change idName="sym_node" tagName="dropTable" />
+    <exclude-change idName="sym_node_channel_ctl" tagName="dropTable" />
+    <exclude-change idName="sym_node_communication" tagName="dropTable" />
+    <exclude-change idName="sym_node_group" tagName="dropTable" />
+    <exclude-change idName="sym_node_group_channel_wnd" tagName="dropTable" />
+    <exclude-change idName="sym_node_group_link" tagName="dropTable" />
+    <exclude-change idName="sym_node_host" tagName="dropTable" />
+    <exclude-change idName="sym_node_host_channel_stats" tagName="dropTable" />
+    <exclude-change idName="sym_node_host_job_stats" tagName="dropTable" />
+    <exclude-change idName="sym_node_host_stats" tagName="dropTable" />
+    <exclude-change idName="sym_node_identity" tagName="dropTable" />
+    <exclude-change idName="sym_node_security" tagName="dropTable" />
+    <exclude-change idName="sym_outgoing_batch" tagName="dropTable" />
+    <exclude-change idName="sym_outgoing_error" tagName="dropTable" />
+    <exclude-change idName="sym_parameter" tagName="dropTable" />
+    <exclude-change idName="sym_registration_redirect" tagName="dropTable" />
+    <exclude-change idName="sym_registration_request" tagName="dropTable" />
+    <exclude-change idName="sym_router" tagName="dropTable" />
+    <exclude-change idName="sym_sequence" tagName="dropTable" />
+    <exclude-change idName="sym_table_reload_request" tagName="dropTable" />
+    <exclude-change idName="sym_table_reload_status" tagName="dropTable" />
+    <exclude-change idName="sym_transform_column" tagName="dropTable" />
+    <exclude-change idName="sym_transform_table" tagName="dropTable" />
+    <exclude-change idName="sym_trigger" tagName="dropTable" />
+    <exclude-change idName="sym_trigger_hist" tagName="dropTable" />
+    <exclude-change idName="sym_trigger_router" tagName="dropTable" />
+    <exclude-change idName="sym_trigger_router_grouplet" tagName="dropTable" />
+    <exclude-change idName="sym_fk_cf_2_grp_lnk" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_ftr_2_ftrg" tagName="dropForeignKeyConstraint" />
+    <exclude-change idName="sym_fk_trgplt_2_tr" tagName="dropForeignKeyConstraint" />
+  </component>
+</project>
